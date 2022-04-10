@@ -1,0 +1,24 @@
+
+[tool.pyflow]
+name = "pier"
+py_version = "3.10"
+version = "0.1.0"
+authors = ["Erlend Tobiassen <noreply@okkr.no>"]
+description = "Docker repository mirroring to disk"
+homepage = "https://github.com/regiontog/pier"
+repository = "https://github.com/regiontog/pier"
+license = "MIT"
+keywords = ["docker", "registry", "mirror"]
+classifiers = []
+python_requires = ">=3.6"
+package_url = "https://upload.pypi.org/legacy/"
+
+[tool.pyflow.scripts]
+pier = "pier:cli_entrypoint"
+
+[tool.pyflow.dependencies]
+loguru = "^0.6.0"
+typer = "^0.4.1"
+click = "^8.1.2"
+
+[tool.pyflow.dev-dependencies]

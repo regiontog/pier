@@ -1,0 +1,29 @@
+[[package]]
+id = 3
+name = "typer"
+version = "0.4.1"
+source = "pypi+https://pypi.org/pypi/typer/0.4.1/json"
+dependencies = []
+
+[[package]]
+id = 4
+name = "click"
+version = "8.1.2"
+source = "pypi+https://pypi.org/pypi/click/8.1.2/json"
+dependencies = []
+
+[[package]]
+id = 1
+name = "loguru"
+version = "0.6.0"
+source = "pypi+https://pypi.org/pypi/loguru/0.6.0/json"
+dependencies = ["colorama 0.4.4 pypi+https://pypi.org/pypi/colorama/0.4.4/json"]
+
+[[package]]
+id = 2
+name = "colorama"
+version = "0.4.4"
+source = "pypi+https://pypi.org/pypi/colorama/0.4.4/json"
+dependencies = []
+
+[metadata]
