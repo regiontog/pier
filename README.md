@@ -2,12 +2,12 @@
 
 Docker image mirroring to disk
 
-# Demo
+## Demo
 [![Pier video demo](docs/demo.gif)](https://www.youtube.com/watch?v=HqjznbBxseI)
 
 ## How
 
-Uses [library/registry](https://hub.docker.com/_/registry) in pull through mode to efficiently mirror docker images to disk using the filesystem storage driver. Thanks to image layering the total size of the caching directory will be about equal or smaller that the combined compressed size of the images. The time-to-live of the registry blob cache is hardcoded to 7days, solved by MR [#3238](https://github.com/distribution/distribution/pull/3238), so all images that needs to be mirrored should be pulled before a sync/backup to avoid any missing blobs. Any old images not specified in the mirror job might be GC'ed by the registry. So long as the mirroring job is ran more than once every 7 days no unnecessary blobs should be fetched.
+Uses [library/registry](https://hub.docker.com/_/registry) in pull through mode to efficiently mirror docker images to disk using the filesystem storage driver. Thanks to image layering the total size of the caching directory will be about equal or smaller than the combined compressed size of the images. The time-to-live of the registry blob cache is hardcoded to 7days, solved by MR [#3238](https://github.com/distribution/distribution/pull/3238), so all images that needs to be mirrored should be pulled before a sync/backup to avoid any missing blobs. Any old images not specified in the mirror job might be GC'ed by the registry. So long as the mirroring job is ran more than once every 7 days no unnecessary blobs should be fetched.
 
 ## Links
 * [library/registry dockerhub](https://hub.docker.com/_/registry)
