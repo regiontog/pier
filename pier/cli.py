@@ -1,4 +1,3 @@
-from collections import defaultdict
 import os
 import typer
 
@@ -27,22 +26,9 @@ http:
 storage:
   filesystem:
     rootdirectory: /var/lib/registry
-  delete:
-    enabled: true
 proxy:
   remoteurl: https://registry-1.docker.io
 """
-
-# DELETE_CONFIG = """
-# version: 0.1
-# http:
-#   addr: 0.0.0.0:5000
-# storage:
-#   filesystem:
-#     rootdirectory: /var/lib/registry
-#   delete:
-#     enabled: true
-# """
 
 app = typer.Typer()
 
